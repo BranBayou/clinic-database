@@ -1,5 +1,7 @@
 /* Database schema to keep the structure of entire database. */
 
+CREATE DATABASE clinic-database;
+
 CREATE TABLE patients (
 	id serial primary key,
 	name varchar(25),
