@@ -26,3 +26,11 @@ CREATE TABLE treatments (
 	type varchar(25),
 	name varchar(25)
 );
+CREATE TABLE invoice_items (
+	id serial primary key,
+	unit_price decimal,
+	quantity int,
+	total_price decimal,
+	invoce_id int references invoices(id),
+	treatment_id int references treatments(id)
+	);
