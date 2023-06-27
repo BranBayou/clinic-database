@@ -34,3 +34,9 @@ CREATE TABLE invoice_items (
 	invoce_id int references invoices(id),
 	treatment_id int references treatments(id)
 	);
+
+CREATE TABLE medical_treatmen_helper (
+	id serial primary key,
+	medical_history_id int references medical_histories(id),
+	treatment_id int references treatments(id)
+);
